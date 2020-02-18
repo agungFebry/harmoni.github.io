@@ -1,0 +1,72 @@
+/*section paket trip*/
+figure
+{
+	position: relative;
+	overflow: hidden;
+}
+
+figure::after
+{
+	content         : '';
+	display         : block;
+	position        : absolute;
+	opacity         : 0.8;
+	background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.2));
+	height          : 100%;
+	width           : 100%;
+	bottom          : 8px;
+	border-radius   : 4px;
+}
+
+.caption-paket-trip
+{
+	position      : absolute;
+	bottom        : 0;
+	z-index       : 99;
+	padding       : 0 10px 20px 20px;
+	letter-spacing: 1px;
+}
+
+.caption-paket-trip .paket
+{
+	font-weight: bold;
+	color: #FE8008 !important; 
+}
+
+.caption-paket-trip .title-paket
+{
+	font-size  : 16px;
+	color      : #F6F6FF;
+	font-weight: 400;
+}
+
+.caption-paket-trip .title-paket span
+{
+	font-weight: 700;
+	color: #FE8008;
+}
+
+.caption-paket-trip .price-paket
+{
+	font-size  : 12px; 
+	color      : #A9A9AE;
+	font-weight: 400;
+}
+
+/*.figure a*/
+{
+	position  : relative;
+	bottom    : 0;
+	background: rgba(0,0,0,0.7);
+	opacity   : 0;
+	transition: opacity 0.3s;
+	z-index   : 98;
+}
+
+.img-paket a:hover
+{
+	opacity: 1;
+	transform: scale(1.05);
+	overflow: hidden;
+}
+/*/section paket trip*/
