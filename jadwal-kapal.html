@@ -8,28 +8,35 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
-    <!-- <script defer src="assets/fontawesome/css/all.css"></script> -->
-    <script defer src="assets/fontawesome/js/all.js"></script>
+    <script defer src="assets/fontawesome/css/all.css"></script> 
+
 </head>
 <body data-spy="scroll" data-target="#navbarTest" data-offset="0">
-
+    <div class="loader">
+        <div id="loading"></div>
+    </div>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbarTest">
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbarTest" data-aos="fade-down">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/img/logo.png" class="logo">
             </a>
-            <a href="" class="navbar-toggler page-scroll" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <div>
-                    <i class="fas fa-bars c-purple"></i>
+                    <i class="fas fa-bars"></i>
                 </div>
             </a>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item  d-lg-none mx-auto mt-5">
+                        <img src="assets/img/logo.png" class="logo">
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
                     </li>
@@ -45,39 +52,52 @@
                     <li class="nav-item">
                         <a class="nav-link" href="s&k.html">SYARAT DAN KETENTUAN</a>
                     </li>
+                    <div class="d-flex mt-2 justify-content-center d-lg-none">
+                        <a class="nav-link mr-5 icon" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="nav-link mr-5 icon" href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a class="nav-link icon" href="#">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </a>
+                    </div>
+                    <a class="btn mx-auto icon-close d-lg-none">
+                        <i class="far fa-times-circle"></i>
+                    </a>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- /navbar -->
 
-    <section id="home" class="home">
+    <section id="home" class="home ex">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active banner">
+                <div class="carousel-item active banner2">
                     <img src="assets/img/banner.png" class="img-banner">
                 </div>
-                <div class="carousel-item banner">
+                <div class="carousel-item banner2">
                     <img src="assets/img/paket-trip/img1.png" class="img-banner">
                 </div>
-                <div class="carousel-item banner">
+                <div class="carousel-item banner2">
                     <img src="assets/img/paket-trip/img14.png" class="img-banner">
                 </div>
             </div>
-            <div class="title-banner">
-                <h5>Harmoni Karimun Jawa</h5>
-                <h5>Jadwal Kapal</h5>
-            </div>
+            <div class="title-banner" data-aos="fade-up" data-aos-duration="1500">
+                <h5 class="hkj">Harmoni Karimun Jawa</h5>
+                <p>Jadwal Kapal <span>Trip </span>Karimun Jawa</p>
+            </div>   
         </div>
     </section>
 
-    <section id="jadwal-kapal">
-        <div class="container">
-            <h5 class="title-section">Jadwal Pemberangkatan Kapal</h5>
-            <div class="card border-0">
+    <section id="jadwal-kapal" class="mt-20 mt-16">
+        <div class="container mt-3">
+            <div class="card border-0" data-aos="fade-up">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                   <th scope="col">Hari</th>
@@ -131,7 +151,7 @@
 <footer id="footer">
     <div class="container font-weight-light">
         <div class="row">
-            <div class="kol col-6 col-sm-6 col-md-4">
+            <div class="kol col-sm-6 col-md-4">
                 <h5>HARMONI KARIMUN JAWA</h5>
                 <a href="" class="text-sm">
                     <p>HOME</p>
@@ -147,7 +167,7 @@
                 </a>
             </div>
 
-            <div class="kol col-6 col-sm-6 col-md-4">
+            <div class="kol col-sm-6 col-md-4">
                 <h5>PAKET WISATA</h5>
                 <a href="" class="text-sm">
                     <p>VIA BANDARA SEMARANG</p>
@@ -193,10 +213,29 @@
 </footer>
 
 
+<div class="row">
+    <div class="col-4 ml-auto">
+        <a href="" class="btn-booking btn-action mr-5" style="display: inline;"><i class="fab fa-whatsapp mr-3"></i>Pesan Sekarang</a>
+    </div>
+    <div class="col-2">
+        <a href="#home" class="btn-action scroll-to-top page-scroll" style="display: inline;">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+</div>
+
+
 
 <!-- Optional JavaScript -->
-<script defer src="assets/js/jquery.js"></script>
-<script defer src="assets/js/bootstrap.min.js"></script>
-<script defer src="assets/js/script.js"></script>    
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script> 
+<script defer src="assets/fontawesome/js/all.js"></script>
+<script type="text/javascript" src="assets/js/aos.js"></script>  
+<script>
+    AOS.init({
+        duration: 1200,
+    });
+</script>
 </body>
 </html>
