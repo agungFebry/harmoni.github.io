@@ -46,6 +46,7 @@ a:hover
 	border-radius: 2px;
 	padding      : 10px;
 	background   : #FE8008 !important;
+	transition   : all .5s ease;
 }
 
 .btn-custom:hover
@@ -116,6 +117,7 @@ a:hover
 	font-weight   : 500;
 	font-family   : 'montserrat';
 	letter-spacing: 1px;
+	transition    : all .5s ease;
 }
 
 .navbar ul li a:hover,
@@ -150,36 +152,33 @@ a:hover
 	height          : 100%;
 	width           : 100%;
 	bottom          : 0;
-	z-index: 98;
+	z-index         : 98;
 }
 
 .title-banner
 {
 	position   : absolute;
-	height     : 100%;
-	top        : 75%;
-	bottom     : 0;
-	left       : 0;
-	right      : 0;
-	margin     : auto;
+	top        : 50%;
+	left       : 50%;
 	font-family: 'roboto';
-	text-align : center;
-	z-index    : 99;
+	text-align: center;
+	z-index    : 9;
+	transform  : translateX(-50%) translateY(-50%) !important;
 }
 
 .title-banner .paket
 {
 	font-size     : 2.5vw;
+	margin-top    : 30px !important;
 	color         : #ffffff;
 	font-weight   : 100;
 	letter-spacing: 1px;
-	font-family: 'montserrat';
-	text-shadow   : 0 .1px 10px #000000;
+	font-family   : 'montserrat';
 }
 
 .title-banner h4
 {
-	font-size     : 2vw;
+	font-size     : 20px;
 	color         : #f5f5f5;
 	font-weight   : 200;
 	letter-spacing: 1px;
@@ -190,24 +189,21 @@ a:hover
 {
 	font-family: arizonia;
 	color      : #FE8008;
-	font-size  : 6vw;
+	font-size  : 5vw;
 	font-weight: 500;
-	text-shadow: 0 0 .1rem #000000;
 }
-
 .title-banner p
 {
 	font-size     : 14px;
 	font-weight   : 100 !important;
 	letter-spacing: 2px;
 	color         : #F5F5F5;
-	margin-bottom : 50px;
 }
 
 .title-banner a
 {
-	font-size: 12px;
-	font-weight: 200;
+	font-size     : 12px;
+	font-weight   : 200;
 	letter-spacing: 2px;
 }
 
@@ -445,7 +441,7 @@ table thead
 /*/jadwal kapal*/
 
 /*MOBILE VERSION*/
-@media (max-width: 800px)
+@media (max-width: 992px)
 {	
 	.navbar-collapse
 	{
@@ -521,7 +517,7 @@ table thead
 
 	.mt-16
 	{
-		margin-top: -350px !important;
+		margin-top: -330px !important;
 		position  : relative;
 	}
 
@@ -645,17 +641,23 @@ table thead
 
 .icon
 {
-	color: #ffffff;
+	color    : #A9A9AE;
 	font-size: 20px;
+	transition: all .5s ease;
+}
+
+.icon:hover
+{
+	color: #FE8008;
 }
 
 .icon-close
 {
-	font-size: 35px;
-	color: #9999;
-	bottom: 30px;
+	font-size  : 35px;
+	color      : #A9A9AE !important;
+	bottom     : 50px;
 	font-weight: 100;
-	position: absolute;
-	left: 0;
-	right: 0;
+	position   : absolute;
+	left       : 0;
+	right      : 0;
 }
